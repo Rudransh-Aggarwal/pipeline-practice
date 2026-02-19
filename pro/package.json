@@ -1,0 +1,17 @@
+{
+  "name": "pro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server-memory.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "mongod": "^2.0.0",
+    "mongoose": "^9.2.1"
+  }
+}
