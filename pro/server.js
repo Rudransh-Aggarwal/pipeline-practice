@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 
 // Connect MongoDB
-mongoose.connect("mongodb://host.docker.internal", {})
+mongoose.connect("mongodb://host.docker.internal:27017/students", {})
 .then(() => console.log("MongoDB Connected"))
 .catch(err => console.log(err));
 
