@@ -4,4 +4,4 @@ WORKDIR /mysite
 
 COPY . .
 
-RUN ["node","server.js"] 
+RUN ["npm","server.js"] 
