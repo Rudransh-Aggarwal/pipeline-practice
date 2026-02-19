@@ -10,9 +10,8 @@ pipeline{
 
         stage('build'){
             steps{
-                bat 'cd web-app'
-                bat 'npm install'
-                bat 'docker build -t app ..'
+                bat 'cd web-app && npm install'
+                bat 'docker build -t app ./web-app'
             }
         }
 
