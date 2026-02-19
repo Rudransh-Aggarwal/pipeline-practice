@@ -4,20 +4,21 @@ pipeline{
     stages{
         stage('checkout'){
             steps{
-            checkout scm
+                checkout scm
             }
         }
 
         stage('build'){
             steps{
-            bat 'npm install'
-            bat 'docker build -t app ./web-app'
+                bat 'cd /web-app'
+                bat 'npm install'
+                bat 'docker build -t app ..'
             }
         }
 
         stage('deploy'){
             steps{
-            bat 'docker run -d -p 3000:3000 app'
+                bat 'docker run -d -p 3000:3000 app'
             }
         }
     }
