@@ -8,18 +8,18 @@ pipeline{
             }
         }
 
-        stage('build'){
+        stage('installing dependencies'){
             steps{
                 bat 'cd pro && npm install'
                 bat 'cd pro && npm install express'
                 bat 'cd pro && npm install mongoose'
-                bat 'docker build -t mongo ./pro'
             }
         }
 
         stage('deploy'){
             steps{
-                bat 'docker run -d -p 3000:3000 mongo'
+                bat 'docker compose down'
+                bat 'docker compose up -d'
             }
         }
     }

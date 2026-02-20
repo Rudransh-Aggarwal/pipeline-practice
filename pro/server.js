@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 
 // Connect MongoDB
-mongoose.connect("mongodb://172.27.240.1:27017/studentsDB", {})
+mongoose.connect("mongodb://localhost:27017", {})
 .then(() => console.log("MongoDB Connected"))
 .catch(err => console.log(err));
 
